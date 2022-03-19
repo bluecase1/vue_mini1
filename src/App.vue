@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!--
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  -->
+  <top-menu></top-menu>
+  <router-view></router-view>
+  <BottomInfo></BottomInfo>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
+import TopMenu from './components/common/top_menu.vue'
+import BottomInfo from './components/common/bottom_info.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TopMenu,
+    BottomInfo
+    //HelloWorld
   }
 }
 </script>
