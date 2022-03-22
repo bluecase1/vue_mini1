@@ -3,8 +3,8 @@
 import {createWebHistory, createRouter} from 'vue-router';
 import MainPage from "@/components/main/MainPage.vue";
 import BoardMain from "@/components/board/board_main.vue";
-import LoginUser from "@/components/user/login_user.vue";
-import JoinUser from "@/components/user/join_user.vue";
+import LoginUser from "@/components/user/login.vue";
+import JoinUser from "@/components/user/join.vue";
 import ModifyUser from "@/components/user/modify_user.vue";
 
 const routes = [
