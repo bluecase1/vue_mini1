@@ -1,16 +1,50 @@
 //https://jinyisland.kr/post/vue-router/
 
 import {createWebHistory, createRouter} from 'vue-router';
-import MainPage from "@/components/main/MainPage";
+import MainPage from "@/components/main/MainPage.vue";
+import BoardMain from "@/components/board/board_main.vue";
+import LoginUser from "@/components/user/login_user.vue";
+import JoinUser from "@/components/user/join_user.vue";
+import ModifyUser from "@/components/user/modify_user.vue";
 
-const routes = [{
-    path: '/',
-    component: MainPage
-}]
+const routes = [
+    {
+        path: '/',
+        component: MainPage
+    },
+    {
+        path: '/board_main',
+        component: BoardMain
+    },
+    {
+        path: '/login',
+        component: LoginUser
+    },
+    {
+        path: '/join',
+        component: JoinUser
+    },
+    {
+        path: '/modify_user',
+        component: ModifyUser
+    }
+]
 
 const router = createRouter({
+    mode: "history",
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition){
+        //console.log(">>> savedPosition: " + savedPosition)
+        if(savedPosition) {
+            return savedPosition
+        } else {
+        return{
+            left : 0,
+            top : 0
+        }}
+
+    }
 })
 
 export default router;
